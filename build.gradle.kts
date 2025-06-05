@@ -15,7 +15,7 @@ val paperApiName = "1.21.5-R0.1-SNAPSHOT"
 // = = =
 
 group = "cat.nyaa"
-version ="9.6"
+version ="9.6-Folia"
 
 java {
     // Configure the java toolchain. This allows gradle to auto-provision JDK 21 on systems that only have JDK 8 installed for example.
@@ -23,6 +23,7 @@ java {
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven ("https://papermc.io/repo/repository/maven-public/") //paper
     maven ("https://libraries.minecraft.net")  // mojang
@@ -32,6 +33,7 @@ repositories {
 
 dependencies {
     paperweight.paperDevBundle(paperApiName)
+    compileOnly("com.molean:FoliaAdapter:1.0-SNAPSHOT")
     compileOnly("net.essentialsx:EssentialsX:2.21.1") {
         exclude(group = "org.spigotmc", module = "spigot-api")
     }    // soft dep

@@ -2,6 +2,8 @@ name: NyaaCore
 main: cat.nyaa.nyaacore.NyaaCoreLoader
 description: "Code infrastructure for all NyaaCat plugins."
 version: ${version}
+depend:
+  - FoliaAdapter
 softdepend: [ Essentials ]
 load: STARTUP
 loadbefore:
@@ -9,3 +11,4 @@ loadbefore:
 authors: [ RecursiveG,Librazy,cyilin ]
 website: "https://github.com/NyaaCat/NyaaCore"
 api-version: ${api_version}
+folia-supported: true
